@@ -1,0 +1,292 @@
+/* 首页专有 main 模块制作 start */
+
+.main {
+    margin-top: 10px;
+    margin-left: 220px;
+    width: 980px;
+    height: 455px;
+}
+
+
+/* 焦点图  li 轮播图*/
+
+.main .focus {
+    width: 721px;
+    height: 455px;
+    background-color: skyblue;
+}
+
+.main .focus ul li img {
+    width: 721px;
+    height: 455px;
+}
+
+
+/* 快报模块 */
+
+.main .newsflash {
+    width: 250px;
+    height: 455px;
+}
+
+
+/* 重磅模块 */
+
+.main .newsflash .new {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+
+
+/* hd */
+
+.main .newsflash .new .news_hd {
+    padding: 0 15px;
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+}
+
+.main .newsflash .new .news_hd h5 {
+    font-size: 16px;
+    font-weight: 550;
+}
+
+.main .newsflash .new .news_hd .more::after {
+    font-family: "iconfont" !important;
+    content: '\e602';
+}
+
+
+/* bd */
+
+.main .newsflash .new .news_bd {
+    padding: 5px 15px 0;
+}
+
+.main .newsflash .new .news_bd li {
+    font-size: 13px;
+    height: 24px;
+    line-height: 24px;
+    /* 1. 超出文字省略号显示  li overflow: hidden */
+    overflow: hidden;
+    /* 2.文字强制一行显示，不允许换行 */
+    white-space: nowrap;
+    /* 3.文字超出部分，省略号代替显示 */
+    text-overflow: ellipsis;
+}
+
+.main .newsflash .new .news_bd li:hover {
+    border-bottom: 1px solid gray;
+}
+
+.main .newsflash .new .news_bd li:hover strong {
+    color: red;
+}
+
+
+/* 生活服务模块 */
+
+.main .newsflash .lifeservice {
+    overflow: hidden;
+    height: 209px;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+    /* 超出的 li 隐藏 */
+}
+
+.main .newsflash .lifeservice ul {
+    width: 252px;
+}
+
+.main .newsflash .lifeservice ul li {
+    position: relative;
+    float: left;
+    width: 63px;
+    height: 71px;
+    text-align: center;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.main .newsflash .lifeservice ul li i {
+    margin-top: 12px;
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    background-color: pink;
+    /* 背景模式，放入精灵图 */
+    /* background: url() no-repeat -19px -15px; */
+}
+
+.main .newsflash .lifeservice ul li .tip {
+    position: absolute;
+    top: -12px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    color: #fff;
+    background-color: red;
+}
+
+.main .newsflash .lifeservice ul li .tip::after {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    content: '';
+    border: 0;
+    border: 5px solid transparent;
+    border-left: 7px solid transparent;
+    border-right: 8px solid transparent;
+    /* transparent 透明 */
+    border-bottom-color: #fff;
+}
+
+
+/* 广告模块 */
+
+.main .newsflash .bargain {
+    margin-top: 5px;
+}
+
+.main .newsflash .bargain img {
+    height: 76px;
+}
+
+
+/* 首页专有 main 模块制作 end */
+
+
+/* recom 推荐模块制作 start */
+
+.recom {
+    margin-top: 12px;
+    height: 163px;
+    background-color: #ebebeb;
+}
+
+.recom .recom_hd img {
+    width: 205px;
+    height: 163px;
+}
+
+.recom .recom_bd ul li {
+    position: relative;
+    float: left;
+}
+
+.recom .recom_bd ul li img {
+    width: 248px;
+}
+
+
+/* :nth-chilid( n+3 (从第3个开始往后选) -n+3 (从第三个开始往前选)  ) */
+
+.recom .recom_bd ul li:nth-child(-n+3)::after {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    content: '';
+    width: 1px;
+    height: 145px;
+    background-color: #ddd;
+}
+
+
+/* recom 推荐模块制作 end */
+
+
+/* floor 楼层区模块 start */
+
+.floor .w {
+    margin-top: 30px;
+}
+
+.box_hd {
+    height: 35px;
+    border-bottom: 2px solid #c81623;
+}
+
+.box_hd h3 {
+    float: left;
+    line-height: 30px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.box_hd .tab_list {
+    float: right;
+    line-height: 30px;
+}
+
+.box_hd .tab_list li {
+    float: left;
+}
+
+.box_hd .tab_list li a {
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+
+/* .box_hd .tab_list li a:hover {
+    color: #c81623;
+} */
+
+.floor .jiadian .box_bd {
+    height: 361px;
+    background-color: pink;
+}
+
+.box_bd .tab_content .tab_list_item>div {
+    float: left;
+    height: 361px;
+}
+
+
+/* 指定盒子的 width 大小 */
+
+.col_210 {
+    text-align: center;
+    width: 210px;
+    background-color: #f9f9f9;
+}
+
+.col_210 ul li {
+    float: left;
+    text-align: center;
+    width: 85px;
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #ccc
+}
+
+.col_210 ul li a {
+    font-size: 12px;
+}
+
+.col_210 ul {
+    padding-left: 12px;
+}
+
+.col_210 ul li {
+    margin-right: 10px;
+}
+
+.col_329 {
+    width: 329px;
+}
+
+.col_221 {
+    width: 221px;
+    border-right: 1px solid #c81623;
+}
+
+.col_219 {
+    width: 219px;
+}
+
+
+/* floor 楼层区模块 end */

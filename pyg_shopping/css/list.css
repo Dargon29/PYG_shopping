@@ -1,0 +1,82 @@
+/* 列表列专有css */
+
+
+/* 列表页的秒杀模块 */
+
+.sk {
+    position: absolute;
+    top: 40px;
+    left: 190px;
+    padding: 3px 0 0 14px;
+    border-left: 1px solid #c81523;
+}
+
+
+/* 秒杀 nav 左侧模块 */
+
+
+/* 解决 行高多了 50-47: 3px; 浮动的盒子不会压住文本流 */
+
+.nav {
+    overflow: hidden;
+}
+
+.sk_list ul li {
+    float: left;
+}
+
+.sk_list ul li a {
+    display: inline-block;
+    /*  依据 common.css 的 nav 的高度 文字垂直居中 */
+    line-height: 47px;
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* 秒杀右侧模块 */
+
+.sk_con ul li {
+    position: relative;
+    float: left;
+}
+
+.sk_con ul li:last-child::after {
+    position: absolute;
+    top: 20px;
+    right: 7px;
+    font-family: "iconfont";
+    content: '\e601';
+    font-size: 10px;
+}
+
+.sk_con ul li a {
+    display: inline-block;
+    line-height: 50px;
+    /* 行高多了 50-47: 3px; 浮动的盒子不会压住文本流 */
+    padding: 0 20px;
+    font-size: 12px;
+}
+
+.sk_bd ul li {
+    float: left;
+    margin-right: 13px;
+    width: 290px;
+    height: 460px;
+    border: 1px solid transparent;
+    /* ☆ 边框大小会影响盒子布局显示 */
+}
+
+
+/* 4n n从1开始，n+4 n 从0开始 */
+
+.sk_bd ul li:nth-child(4n) {
+    margin: 0;
+}
+
+.sk_bd ul li:hover {
+    border: 1px solid #c81523;
+    /* ☆ 边框大小会影响盒子布局显示 */
+    background-color: skyblue;
+}

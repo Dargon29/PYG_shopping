@@ -1,0 +1,94 @@
+/* 所有内外边距清零 */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 运用 CSS3 盒子模型，解决，内边距影响盒子大小( 盒子大小 = width ) */
+    box-sizing: border-box;
+}
+
+
+/* em 和 i 斜体的文字不倾斜 */
+
+em,
+i {
+    font-style: normal;
+}
+
+
+/* 去掉 li 前的小圆点 */
+
+li {
+    list-style: none;
+}
+
+
+/* 去掉链接默认样式 */
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+img {
+    /* 照顾低版本浏览器，如果 img 外包含链接 a 会有 border 的问题 */
+    border: 0;
+    /* 取消图片底侧有空隙的问题 */
+    vertical-align: middle;
+}
+
+
+/* 鼠标经过，按钮默认为小手 */
+
+button {
+    cursor: pointer;
+}
+
+button,
+input {
+    font-family: Microsoft YaHei 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* 手动去掉，灰色边框 */
+    border: 0;
+    outline: 0;
+}
+
+body {
+    /* 抗锯齿形，文字放大变得更加清晰 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    font: 12px/1.5 Microsoft YaHei 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.hide,
+.none {
+    display: none;
+}
+
+
+/* 清楚浮动伪类 */
+
+.clearfix::after {
+    visibility: hidden;
+    display: block;
+    content: '';
+    height: 0;
+    clear: both;
+}
+
+
+/* 兼容 */
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* 浮动 */
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}

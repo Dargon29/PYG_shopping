@@ -1,0 +1,375 @@
+/* 相同功能的模块共同样式类 */
+
+
+/* 包含：首页 列表页 详情页 尾部 */
+
+
+/* 包含：版心 width 、清楚浮动、页面文字颜色 （页面公共部分） */
+
+
+/* 版心 */
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 左右浮动 */
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/* 字体红色 */
+
+.style_red {
+    color: #c81623;
+}
+
+
+/* 快捷导航模块 */
+
+.shorcut {
+    height: 31px;
+    line-height: 31px;
+    background-color: #f1f1f1;
+}
+
+.shorcut ul li {
+    float: left;
+}
+
+
+/* 选中所有偶数 li even (偶数)  odd (奇数)*/
+
+.shorcut .fr ul li:nth-child(even) {
+    margin: 9px 15px;
+    width: 1px;
+    height: 12px;
+    background-color: #666;
+}
+
+
+/* 伪元素 下拉符号 */
+
+.arrow-icon::after {
+    /* iconfont.css 的类名 */
+    font-family: "iconfont" !important;
+    content: '\e621';
+}
+
+
+/* header 模块 制作 start */
+
+.header {
+    position: relative;
+    height: 105px;
+}
+
+
+/* header 模块 logo 制作 */
+
+.header .logo {
+    /*  子绝父相 */
+    position: absolute;
+    top: 25px;
+    width: 171px;
+    height: 61px;
+    /* background-color: blue; */
+}
+
+.header .logo h1 a {
+    /* 行内块元素，转块元素，才能设置宽高 */
+    display: block;
+    width: 171px;
+    height: 61px;
+    /* font-size: 0; */
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url(../images/logo.jpg) no-repeat center center;
+    background-size: 172px;
+    /* 背景图片 size */
+}
+
+
+/* /* header 模块 搜索框 制作 */
+
+.header .search {
+    position: absolute;
+    left: 346px;
+    top: 25px;
+    width: 538px;
+    height: 36px;
+    border: 2px solid #b1191a;
+    background-color: skyblue;
+}
+
+.header .search input {
+    float: left;
+    padding-left: 10px;
+    width: 454px;
+    height: 32px;
+}
+
+
+/* 之间有默认的小空隙，添加 float 即可 */
+
+.header .search button {
+    width: 80px;
+    height: 32px;
+    color: #fff;
+    background-color: red;
+}
+
+
+/* hotwords 模块制作 */
+
+.header .hotwords {
+    position: absolute;
+    top: 66px;
+    left: 346px;
+}
+
+.header .hotwords a {
+    /* a 行内元素，不独占一行，不能设置宽高 */
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+
+/* shopcat 购物车模块 */
+
+.header .shopcat {
+    position: absolute;
+    top: 25px;
+    right: 60px;
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #dfdfdf;
+}
+
+.header .shopcat::before {
+    margin-right: 5px;
+    font-family: "iconfont" !important;
+    color: #b1191a;
+    content: '\e62d';
+}
+
+.header .shopcat::after {
+    margin-left: 5px;
+    font-family: "iconfont" !important;
+    content: '\e602';
+}
+
+.header .shopcat .count {
+    position: absolute;
+    top: -5px;
+    /*  数量添加，会往右边添加 */
+    left: 105px;
+    padding: 2px 5px 0;
+    height: 14px;
+    line-height: 11px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #e60014;
+    border-radius: 7px 7px 7px 0;
+}
+
+
+/* header 模块 制作 end */
+
+
+/* nav 模块制作 start  */
+
+.nav {
+    /* 通栏盒子，不需要给宽度 */
+    height: 47px;
+    border-bottom: 2px solid #b1191a;
+}
+
+
+/* dropdown 下拉模块 */
+
+.nav .dropdown {
+    width: 210px;
+    height: 45px;
+    background-color: #c81623;
+}
+
+.nav .dropdown .dt {
+    width: 100%;
+    height: 100%;
+    line-height: 45px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.nav .dropdown .dd {
+    margin-top: 2px;
+    width: 100%;
+    height: 465px;
+    font-size: 10px;
+    background-color: #e60014;
+}
+
+
+/* .nav .dropdown .dt:hover .dd {
+    font-size: 500px;
+}
+ */
+
+.nav .dropdown .dd ul li {
+    /* 布局 */
+    position: relative;
+    margin-left: 2px;
+    padding-left: 20px;
+    height: 31px;
+    line-height: 31px;
+    color: #fff;
+}
+
+
+/* ::after 跟多小图标 */
+
+.nav .dropdown .dd ul li::after {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-family: "iconfont" !important;
+    font-size: 14px;
+    font-weight: bold;
+    content: '\e602';
+}
+
+.nav .dropdown .dd ul li:hover {
+    color: #c81623;
+    background-color: #fff;
+}
+
+.nav .dropdown .dd ul li a {
+    /* 字体修饰 */
+    font-size: 14px;
+    color: #fff;
+}
+
+.nav .dropdown .dd ul li:hover a {
+    color: #c81623;
+}
+
+.nav .navitems ul li {
+    float: left;
+}
+
+.nav .navitems ul li a {
+    /*  给 a 设置padding: 适应不同长度的选项按钮，字体居中对齐
+        给 a 设置高以及行高，链接区域变大，字体垂直居中 */
+    display: inline-block;
+    padding: 0 25px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.nav .navitems ul li a:hover {
+    color: #d72821;
+}
+
+
+/* nav 模块制作 end  */
+
+
+/* footer 底部模块制作 start  */
+
+.footer {
+    padding-top: 30px;
+    height: 415px;
+    background-color: #f5f5f5;
+}
+
+
+/* mod_service 模块 */
+
+.footer .mod_service {
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+
+.footer .mod_service ul li {
+    float: left;
+    padding-left: 30px;
+    width: 300px;
+    height: 50px;
+}
+
+.footer .mod_service ul li h5 {
+    float: left;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+}
+
+.footer .mod_service ul li .service_txt h4 {
+    font-size: 14px;
+}
+
+.footer .mod_service ul li .service_txt p {
+    font-size: 12px;
+}
+
+
+/* mod_help 模块 */
+
+.footer .mod_help {
+    padding: 20px 0 0 50px;
+    height: 185px;
+    border-bottom: 1px solid #ccc;
+}
+
+.footer .mod_help dl {
+    float: left;
+    width: 200px;
+}
+
+.footer .mod_help dl:last-child {
+    width: 90px;
+    text-align: center;
+}
+
+.footer .mod_help dl dt {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer .mod_help dl dd {
+    font-size: 12px;
+}
+
+.footer .mod_copyright {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer .mod_copyright .link {
+    margin-bottom: 15px;
+}
+
+.footer .mod_copyright .link a {
+    margin: 0 5px;
+}
+
+.footer .mod_copyright .copyright {
+    line-height: 20px;
+}
+
+
+/* footer 底部模块制作 end  */
